@@ -10,7 +10,7 @@ res = requests.get(
     headers={'Accept':'application/json'}
     )
 if res.status_code == requests.codes.ok:
-    api.update_status(str(res.json()['joke']))
+    api.update_status(res.json()['joke'])
 else:
     pass
  
